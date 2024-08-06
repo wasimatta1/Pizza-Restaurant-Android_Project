@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".fragment.ReportSalesFragment">
+
+    <!-- CardView to contain all elements with modern style -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:background="@drawable/custom_edittext"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp">
+
+        <!-- Inner LinearLayout for vertical arrangement of elements -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- TextView for the title -->
+            <TextView
+                android:id="@+id/selectPizzaTypeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Pizza Type"
+                android:textAlignment="center"
+                android:textColor="@color/purple"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <!-- Spinner for selecting pizza type -->
+            <Spinner
+                android:id="@+id/spinnerPizzaType"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_edittext"
+                android:padding="8dp" />
+
+            <!-- Button to calculate the number of orders -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCalculateOrders"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/purple"
+                android:text="Calculate Number of Orders"
+                android:textSize="18sp"
+                app:cornerRadius="20dp" />
+
+            <!-- TextView to display the number of orders -->
+            <TextView
+                android:id="@+id/tvNumberOfOrders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Number of Orders: 0"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/black" />
+
+            <!-- TextView to display the income for the selected type -->
+            <TextView
+                android:id="@+id/tvIncomePerType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Income for Selected Type: $0.00"
+                android:layout_marginBottom="10dp"
+
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                android:textColor="@color/black" />
+
+            <!-- Button to calculate the total income -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCalculateIncome"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/purple"
+                android:text="Calculate Total Income"
+                android:layout_marginBottom="10dp"
+
+                android:textSize="18sp"
+                app:cornerRadius="20dp" />
+
+            <!-- TextView to display the total income for all types -->
+            <TextView
+                android:id="@+id/tvTotalIncome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Income for All Types: $0.00"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

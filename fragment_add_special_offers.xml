@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    tools:context=".fragment.AddSpecialOffersFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Pizza Image -->
+            <ImageView
+                android:id="@+id/imageView_PizzaDescriptionImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_6" />
+
+            <!-- Rating and Price -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:gravity="center_vertical">
+
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:rating="4.5"
+                    android:isIndicator="true"
+                    android:layout_marginEnd="16dp"
+                    style="?android:attr/ratingBarStyleSmall" />
+
+                <TextView
+                    android:id="@+id/textView_pizzaPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="$10"
+                    android:textSize="18sp"
+                    android:textColor="#FF0000"
+                    android:textStyle="bold"
+                    android:gravity="end" />
+
+            </LinearLayout>
+
+            <!-- Pizza Name and Favorite Button -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView_pizzaName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Hot Pizza"
+                    android:textColor="#000000"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <!-- Pizza Description -->
+            <TextView
+                android:id="@+id/textView_pizzaDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Taste Our Hot Pizza at low price, this is famous pizza and you will love it. It will cost you at low price, we hope you will enjoy and order many times. this is famous pizza and you will love it. it will cost you at low price."
+                android:textSize="14sp"
+                android:textColor="#666666" />
+
+            <!-- Pizza Size Buttons -->
+            <!-- Pizza Size Radio Buttons -->
+            <RadioGroup
+                android:id="@+id/radioGroup_pizzaSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioButton_smallSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:text="Small"
+                    android:background="@drawable/radio_button_background"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButton_mediumSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:background="@drawable/radio_button_background"
+                    android:text="Medium"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButton_largeSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:background="@drawable/radio_button_background"
+                    android:text="Large"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textSize="16sp" />
+            </RadioGroup>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/editText_startOfferPeriod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="25dp"
+                    android:hint="Select start Date"
+                    android:background="@drawable/button_background_2"
+                    android:padding="12dp"
+                    android:textSize="16dp"
+                    android:textColorHint="#000000" />
+                <Button
+                    android:id="@+id/editText_endOfferPeriod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="93dp"
+                    android:background="@drawable/button_background_2"
+                    android:hint="Select End Date"
+                    android:padding="12dp"
+                    android:textSize="16dp"
+                    android:textColorHint="#000000" />
+
+            </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Total Price Input -->
+    <EditText
+        android:id="@+id/editText_offerPrice"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:hint="New price"
+        android:textColorHint="#999999"
+        android:background="@drawable/rounded_background_light" />
+
+    <!-- Add Offer Button -->
+    <Button
+        android:id="@+id/button_addOffer"
+        android:layout_width="190dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/button_background"
+        android:text="Add Offer"
+        android:textColor="#000000" />
+
+</LinearLayout>
+
+
+            <!-- Cancel Button -->
+            <Button
+                android:id="@+id/button_cancelDescriptionPage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#FF0000"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,101 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:background="@drawable/card_background"
+    android:elevation="4dp"
+    android:layout_margin="8dp"
+    android:gravity="center_vertical"
+    android:id="@+id/parentLinear"
+    tools:context=".fragment.OrderItemFragment">
+
+
+    <!-- Pizza Image -->
+    <ImageView
+        android:id="@+id/PizzaImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/img_6"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Text Section -->
+    <LinearLayout
+        android:id="@+id/namesLinear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/PizzaType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hot Pizza"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/dateView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Taste Our Hot Pizza"
+            android:textSize="14sp"
+            android:textColor="#757575" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$10"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#FF0000"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <!-- Counter Section -->
+    <LinearLayout
+        android:id="@+id/quantityLinear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/counter_background"
+        android:padding="8dp"
+        android:layout_marginStart="16dp">
+
+        <TextView
+            android:id="@+id/quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/removeLinear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/counter_background"
+        android:padding="8dp"
+        android:layout_marginStart="16dp">
+
+        <ImageButton
+            android:id="@+id/RemoveFromCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/baseline_cancel_24"
+            />
+
+
+    </LinearLayout>
+
+</LinearLayout>

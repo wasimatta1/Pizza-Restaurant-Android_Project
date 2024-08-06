@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn = "navigation_view">
+
+    <group
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_profile_admin"
+            android:icon="@drawable/profile_nav"
+            android:title="Profile"/>
+        <item
+            android:id="@+id/nav_add_admin"
+            android:icon="@drawable/adminadd_nav"
+            android:title="Add admin"/>
+
+        <item
+            android:id="@+id/nav_order_admin"
+            android:icon="@drawable/orderhistory_nav"
+            android:title="all Orders"/>
+
+
+        <item
+            android:id="@+id/nav_offers_admin"
+            android:icon="@drawable/offer_nav"
+            android:title="Add Special Offers"/>
+
+        <item
+            android:id="@+id/nav_report_admin"
+            android:icon="@drawable/baseline_event_note_24"
+            android:title="Report For Sales"/>
+
+    </group>
+    <item
+        android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_logout_admin"
+                android:icon="@drawable/logout_nav"
+                android:title="Logout"/>
+        </menu>
+
+    </item>
+
+</menu>
